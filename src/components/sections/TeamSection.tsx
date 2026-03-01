@@ -31,29 +31,30 @@ const TeamSection = () => {
   const ref = useScrollAnimation();
 
   return (
-    <section id="team" className="py-24 px-4">
+    <section id="team" className="py-28 px-4">
       <div ref={ref} className="section-animate max-w-5xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-16">
+        <h2 className="section-heading text-center mb-4">
           <span className="gradient-text">Our Team</span>
         </h2>
+        <p className="section-subtext text-center mb-16">The people behind CodeFlow</p>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {members.map((m) => (
-            <div key={m.name} className="glass-card p-6 text-center group hover:scale-105 transition-transform duration-300">
+            <div key={m.name} className="dark-card p-6 text-center group">
               {/* Avatar */}
-              <div className="w-16 h-16 mx-auto mb-4 rounded-full gradient-border flex items-center justify-center">
+              <div className="w-14 h-14 mx-auto mb-5 rounded-full gradient-border flex items-center justify-center">
                 <div className="w-full h-full rounded-full bg-muted flex items-center justify-center">
-                  <span className="gradient-text font-bold text-lg">{m.initials}</span>
+                  <span className="gradient-text font-bold text-sm">{m.initials}</span>
                 </div>
               </div>
 
               <h3 className="font-semibold text-foreground text-sm">{m.name}</h3>
-              <p className="text-xs text-accent mb-4 font-mono">{m.role}</p>
+              <p className="text-xs text-primary/80 mb-4 font-mono mt-1">{m.role}</p>
 
               <ul className="space-y-1.5 text-left">
                 {m.contributions.map((c) => (
-                  <li key={c} className="text-xs text-muted-foreground flex items-start gap-1.5">
-                    <span className="mt-1.5 w-1 h-1 rounded-full bg-accent shrink-0" />
+                  <li key={c} className="text-xs text-muted-foreground flex items-start gap-2">
+                    <span className="mt-1.5 w-1 h-1 rounded-full bg-primary/50 shrink-0" />
                     {c}
                   </li>
                 ))}

@@ -21,20 +21,23 @@ const ComparisonSection = () => {
   const ref = useScrollAnimation();
 
   return (
-    <section className="py-24 px-4">
+    <section className="py-28 px-4">
       <div ref={ref} className="section-animate max-w-5xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-16">
-          <span className="gradient-text">Existing vs Proposed System</span>
+        <h2 className="section-heading text-center mb-4">
+          <span className="gradient-text">Existing vs Proposed</span>
         </h2>
+        <p className="section-subtext text-center mb-16">Why CodeFlow is the better approach</p>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-0 dark-card overflow-hidden">
           {/* Existing */}
-          <div className="glass-card p-8 border-destructive/30">
-            <h3 className="text-xl font-bold text-destructive mb-6">Existing System</h3>
+          <div className="p-8 sm:p-10 border-b md:border-b-0 md:border-r border-border">
+            <h3 className="text-lg font-bold text-destructive mb-6 flex items-center gap-2">
+              <X className="w-5 h-5" /> Existing System
+            </h3>
             <ul className="space-y-4">
               {existing.map((item) => (
                 <li key={item} className="flex items-center gap-3 text-muted-foreground">
-                  <X className="w-5 h-5 text-destructive shrink-0" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-destructive/60 shrink-0" />
                   <span className="text-sm">{item}</span>
                 </li>
               ))}
@@ -42,12 +45,14 @@ const ComparisonSection = () => {
           </div>
 
           {/* Proposed */}
-          <div className="glass-card p-8 border-success/30">
-            <h3 className="text-xl font-bold text-success mb-6">Proposed System</h3>
+          <div className="p-8 sm:p-10">
+            <h3 className="text-lg font-bold text-success mb-6 flex items-center gap-2">
+              <Check className="w-5 h-5" /> Proposed System
+            </h3>
             <ul className="space-y-4">
               {proposed.map((item) => (
                 <li key={item} className="flex items-center gap-3 text-muted-foreground">
-                  <Check className="w-5 h-5 text-success shrink-0" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-success/60 shrink-0" />
                   <span className="text-sm">{item}</span>
                 </li>
               ))}

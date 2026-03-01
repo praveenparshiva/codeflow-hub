@@ -4,13 +4,14 @@ const AbstractSection = () => {
   const ref = useScrollAnimation();
 
   return (
-    <section id="abstract" className="py-24 px-4">
+    <section id="abstract" className="py-28 px-4">
       <div ref={ref} className="section-animate max-w-4xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
+        <h2 className="section-heading text-center mb-6">
           <span className="gradient-text">Abstract</span>
         </h2>
-        <div className="glass-card p-8 sm:p-12">
-          <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+        <p className="text-center text-muted-foreground mb-12 text-sm">Project Summary</p>
+        <div className="dark-card p-8 sm:p-12">
+          <p className="text-muted-foreground leading-[1.8] text-base sm:text-lg">
             CodeFlow is a fully web-based development and communication platform that combines a multi-language online
             code editor with a real-time chat system. The platform allows users to write, compile, and execute programs
             directly in the browser using cloud-based execution services, while simultaneously enabling structured social
