@@ -32,24 +32,26 @@ const TechStack = () => {
   const ref = useScrollAnimation();
 
   return (
-    <section id="tech" className="py-24 px-4">
+    <section id="tech" className="py-28 px-4">
       <div ref={ref} className="section-animate max-w-5xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-16">
+        <h2 className="section-heading text-center mb-4">
           <span className="gradient-text">Technology Stack</span>
         </h2>
+        <p className="section-subtext text-center mb-16">Built with modern, production-grade tools</p>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-6">
           {categories.map((cat) => (
-            <div key={cat.title} className="glass-card p-8">
-              <h3 className="font-bold text-lg text-foreground mb-6 text-center">{cat.title}</h3>
-              <div className="grid grid-cols-2 gap-4">
+            <div key={cat.title} className="dark-card p-7">
+              <h3 className="font-bold text-foreground mb-1">{cat.title}</h3>
+              <div className="w-10 h-0.5 bg-primary/40 mb-6" />
+              <div className="space-y-3">
                 {cat.items.map((item) => (
                   <div
                     key={item.name}
-                    className="flex flex-col items-center gap-2 p-3 rounded-xl hover:bg-muted/50 transition-colors hover:scale-105 duration-200 cursor-default"
+                    className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-muted/50 transition-colors group cursor-default"
                   >
-                    <span className="text-2xl">{item.icon}</span>
-                    <span className="text-xs text-muted-foreground font-medium text-center">{item.name}</span>
+                    <span className="text-lg group-hover:scale-110 transition-transform">{item.icon}</span>
+                    <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors font-medium">{item.name}</span>
                   </div>
                 ))}
               </div>
