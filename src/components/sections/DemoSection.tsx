@@ -32,7 +32,7 @@ const DemoSection = () => {
 
             <div className="rounded-lg bg-muted/30 border border-border aspect-video overflow-hidden">
               <iframe
-                src="https://view.officeapps.live.com/op/embed.aspx?src=https://codeflowblog.netlify.app/Presentation.pptx"
+                src="https://view.officeapps.live.com/op/embed.aspx?src=https://codeflowblog.netlify.app/DemoPresentation.pptx"
                 title="Project Presentation PPT"
                 className="w-full h-full"
               />
